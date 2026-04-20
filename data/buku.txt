@@ -1,0 +1,17 @@
+F-001|Negeri Awan|Fantasi
+F-002|Pedang Cahaya|Fantasi
+F-003|Rahasia Dunia Lain|Fantasi
+FX-001|Jejak Senja|Fiksi
+FX-002|Langit Tanpa Bintang|Fiksi
+FX-003|Cerita Tengah Malam|Fiksi
+FL-001|Logika Kehidupan|Filsafat
+FL-002|Makna Eksistensi|Filsafat
+FL-003|Dialog Pikiran|Filsafat
+SH-001|Bangkit dari Nol|Self Help
+SH-002|Kunci Produktivitas|Self Help
+SH-003|Mindset Juara|Self Help
+KM-001|Ketawa di Ujung Jalan|Komedi
+KM-002|Drama Receh Kehidupan|Komedi
+SS-001|Bayang-Bayang Kota|Sastra
+SS-002|Puisi di Balik Hujan|Sastra
+SS-003|Cerita Tanpa Nama|Sastra

@@ -1,0 +1,3 @@
+10001|Admin|01-01-1990|admin123
+10002|Gusy|01-09-2000|atmint67
+10003|Inaka|01-09-2006|inakaishere
