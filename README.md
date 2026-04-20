@@ -9,10 +9,13 @@ Package objects (Model Data)
 
 Package service (Logika Bisnis)
 * FileService       : kelas utilitas murni (semua method-nya static). Bertanggung jawab atas semua operasi I/O file: readLines() membaca file ke array String,                           writeLines() menulis ulang seluruh file (overwrite), appendLine() menambah satu baris di akhir, dan createIfNotExists() membuat file jika                          belum ada. Kapasitas dibatasi MAX_LINES = 1000.
-* SiswaService      : mengelola CRUD data siswa. Menyimpan path ke siswa.txt. Method tambah() melakukan dua validasi: cek duplikat NIS dan validasi format NIS                           harus angka (matches("\\d+")). Method hapus() menggunakan teknik filter array — memindahkan elemen yang tidak dihapus ke array baru.
+* SiswaService      : mengelola CRUD data siswa. Menyimpan path ke siswa.txt. Method tambah() melakukan dua validasi: cek duplikat NIS dan validasi format NIS                           harus angka (matches("\\d+")). Method hapus() menggunakan teknik filter array (memindahkan elemen yang tidak dihapus ke array baru).
 * BukuService       : mengelola CRUD data buku. Punya dua method pencarian: cariByJudul() dan cariByJenis(), keduanya case-insensitive menggunakan contains().                           Kapasitas maksimal MAX_BUKU = 1000.
 * PegawaiService    : mengelola CRUD pegawai plus fitur login. Yang menarik, konstruktornya memanggil seedDefaultAdmin() yang otomatis membuat akun admin (NIP:                          10001, password: admin123) jika file kosong. Method hapus() punya proteksi: tidak bisa menghapus jika hanya tersisa 1 pegawai.
 * PeminjamanService : paling kompleks. Menerima injeksi SiswaService dan BukuService di konstruktor. Method pinjam() melakukan 3 validasi sebelum menyimpan: siswa                       & buku harus ada, siswa tidak boleh pinjam lebih dari MAKS_PINJAM = 2 buku, dan buku tidak sedang dipinjam orang lain. Kode transaksi di-                          generate otomatis (TRX + jumlah baris + 1).
+
+  - notes
+    CRUD adalah singkatan dari Create, Read, Update, dan Delete yang digunakan sebagai operasi dasar untuk mengelola suatu data.
   
 
 Class Main
