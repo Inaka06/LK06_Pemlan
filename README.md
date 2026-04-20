@@ -1,13 +1,13 @@
 Project ini adalah Sistem Informasi Perpustakaan SMP berbasis Java console. Terdapat 9 class yang terbagi ke dalam 3 kelompok:
 
-Package objects — Model Data
+Package objects (Model Data)
 * Buku       : merepresentasikan data buku dengan atribut kode, judul, dan jenisBuku. Dilengkapi getter/setter, serta dua method penting: toFileString() untuk                    mengkonversi objek ke format teks (dipisah |) agar bisa disimpan ke file, dan fromFileString() (static) untuk membuat objek dari baris teks file.
 * Siswa      : merepresentasikan data siswa dengan atribut nis, nama, dan alamat. Pola yang sama: memiliki toFileString() dan fromFileString(). Validasi bahwa NIS                harus berupa angka dilakukan di service-nya.
 * Pegawai    : merepresentasikan data pegawai/admin dengan atribut nip, nama, tanggalLahir, dan password. Password disimpan dalam bentuk plain text di file.
 * Peminjaman : paling kompleks di antara model. Memiliki dua konstanta static integer: STATUS_BELUM_KEMBALI = 0 dan STATUS_SUDAH_KEMBALI = 1. Menyimpan                           kodeTransaksi, nis (siapa yang meminjam), kodeBuku, tanggalPinjam, tanggalKembali, dan status. Method fromFileString() menggunakan split("\\|", -1)                dengan limit -1 agar field kosong tetap terbaca.
 
 
-Package service — Logika Bisnis
+Package service (Logika Bisnis)
 * FileService       : kelas utilitas murni (semua method-nya static). Bertanggung jawab atas semua operasi I/O file: readLines() membaca file ke array String,                           writeLines() menulis ulang seluruh file (overwrite), appendLine() menambah satu baris di akhir, dan createIfNotExists() membuat file jika                          belum ada. Kapasitas dibatasi MAX_LINES = 1000.
 * SiswaService      : mengelola CRUD data siswa. Menyimpan path ke siswa.txt. Method tambah() melakukan dua validasi: cek duplikat NIS dan validasi format NIS                           harus angka (matches("\\d+")). Method hapus() menggunakan teknik filter array — memindahkan elemen yang tidak dihapus ke array baru.
 * BukuService       : mengelola CRUD data buku. Punya dua method pencarian: cariByJudul() dan cariByJenis(), keduanya case-insensitive menggunakan contains().                           Kapasitas maksimal MAX_BUKU = 1000.
