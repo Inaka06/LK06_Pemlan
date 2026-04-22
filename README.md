@@ -23,3 +23,7 @@ Entry point program. Memegang instance semua service sebagai field static, dan m
 
 
 <img width="1148" height="643" alt="image" src="https://github.com/user-attachments/assets/64ea27ed-3db3-4d15-a44a-053cbb6ec880" />
+
+Sampel Screenshot Program:
+<img width="794" height="1003" alt="image" src="https://github.com/user-attachments/assets/1bf0b6f0-d443-480d-8be1-5c821d737c17" />
+
